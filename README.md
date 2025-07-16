@@ -44,9 +44,6 @@ Visit the FastAPI docs at http://localhost:8000/docs
 make makemigrations m="your message"   # Create new migration
 make migrate                           # Apply migrations
 ```
-or 
-```bash
-docker compose exec backend alembic revision --autogenerate -m "your message"
-docker compose exec backend alembic upgrade head
-```
+
+#### Refer to Makefile for commands
 
