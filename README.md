@@ -1,4 +1,4 @@
-# AICPR_MSE
+# AICPR_MSE SERVER
 
 This is a FastAPI backend project using PostgreSQL, Alembic for database migrations, and Docker for environment management.
 
