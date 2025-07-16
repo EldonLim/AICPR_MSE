@@ -1,0 +1,17 @@
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.log
+
+# Virtual Environments
+venv/
+.env
+
+# macOS
+.DS_Store
+
+# Docker
+*.pid
