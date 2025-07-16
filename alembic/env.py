@@ -20,7 +20,7 @@ if config.config_file_name is not None:
 # target_metadata = mymodel.Base.metadata
 # target_metadata = None
 from app.database import Base
-from app.models import *
+from app.models.post import *
 target_metadata = Base.metadata
 
 
