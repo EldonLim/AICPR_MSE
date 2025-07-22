@@ -17,7 +17,7 @@ This is a FastAPI backend project using PostgreSQL, Alembic for database migrati
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/AICPR_MSE.git
+git clone https://github.com/EldonLim/AICPR_MSE.git
 cd AICPR_MSE
 ```
 
