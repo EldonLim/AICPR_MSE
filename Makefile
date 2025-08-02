@@ -1,11 +1,12 @@
 # Makefile for AICPR_MSE
 
-DB_CONTAINER=aipcr_mse-db-1
-BACKEND_CONTAINER=aipcr_mse-backend-1
+# service name under docker-compose.yml
+DB_CONTAINER=db
+BACKEND_CONTAINER=backend
 
 # Run the database shell
 dbshell:
-	docker exec -it $(DB_CONTAINER) psql -U myuser -d mydb
+	docker compose exec -it $(DB_CONTAINER) psql -U myuser -d mydb
 
 # Create a new migration (usage: make makemigrations m="add new field")
 makemigrations:
@@ -30,3 +31,7 @@ logs:
 # Open a shell inside backend container
 shell:
 	docker compose exec $(BACKEND_CONTAINER) /bin/sh
+
+# Seed database from CSV file (usage: make seed csv=data.csv)
+seed:
+	docker compose exec $(BACKEND_CONTAINER) python -m app.seed /app/$(csv)
