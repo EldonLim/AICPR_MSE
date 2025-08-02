@@ -1,5 +1,5 @@
 # app/main.py
-from typing import Optional
+from typing import List, Optional
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
@@ -14,13 +14,21 @@ class Course(BaseModel):
     course: str
     course_name: str
     course_summary: str
-    image_url: str
+    course_description: str
+    course_url: str
+    number_of_semester: str
+    themes: List[str]
+    tags: List[str]
 
 class CourseUpdate(BaseModel):
     course: Optional[str] = None
     course_name: Optional[str] = None
     course_summary: Optional[str] = None
-    image_url: Optional[str] = None
+    course_description: Optional[str] = None
+    course_url: Optional[str] = None
+    number_of_semester: Optional[str] = None
+    themes: Optional[List[str]] = None
+    tags: Optional[List[str]] = None
 
 Model.Base.metadata.create_all(bind=database.engine)
 

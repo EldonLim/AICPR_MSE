@@ -15,8 +15,8 @@ services:
       POSTGRES_PASSWORD: mypassword
       POSTGRES_DB: mydb
     volumes:
-      - .:/code
-    working_dir: /code
+      - .:/app
+    working_dir: /app
     ports:
       - "8000:8000"
     depends_on:
