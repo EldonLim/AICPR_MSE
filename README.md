@@ -47,3 +47,8 @@ make migrate                           # Apply migrations
 
 #### Refer to Makefile for commands
 
+### To set up the backend (first time)
+```bash
+make seed csv=seeding_data.csv
+make up
+```
